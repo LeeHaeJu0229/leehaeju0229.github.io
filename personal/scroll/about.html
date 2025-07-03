@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>About HJ</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/about_css.css">
+</head>
+<body>
+    <div id="about_wrap">
+        <div class="nav mont">
+            <div class="home about_on">
+                <p><a href="index.html">HJ Memories</a></p>
+            </div>
+            <div class="dot">
+                <span></span>
+            </div>
+        </div>
+
+        <div id="about_main">
+            <div class="about_main_box">
+                <div class="about_img">
+                    <img src="assets/img/about_main.jpg" alt="about_main">
+                </div>
+                <div class="about_main_txt mont">
+                    <p><span>HELLO!</span></p>
+                    <p><span>WELCOME TO</span></p>
+                    <p><span>MY MEMORIES</span></p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div id="about_me" class="mont">
+                <div class="title">
+                    <p><span class="highlight">ABOUT</span>ME</p>
+                </div>
+
+                <div class="article info">
+                    <div class="sub_title">
+                        <p>INFORMATION</p>
+                    </div>
+                    <div class="sub_box">
+                        <ul class="sub_bold">
+                            <li>NAME</li>
+                            <li>BIRTH DAY</li>
+                            <li>EDUCATION</li>
+                            <li>ADDRESS</li>
+                        </ul>
+                        <ul class="sub_content">
+                            <li>이해주</li>
+                            <li>1996.02.29</li>
+                            <li>한국호텔관광전문학교 졸업<br>호텔 소믈리에&바리스타과</li>
+                            <li>ADDRESS</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="article career">
+                    <div class="sub_title">
+                        <p>CAREER</p>
+                    </div>
+
+                    <div class="sub_box">
+                        <ul class="sub_bold">
+                            <li>AGENCY</li>
+                        </ul>
+                        <ul class="sub_content">
+                            <li>뮤자인 - 웹디자이너</li>
+                            <ul>
+                                <li>2017.11~2018.05</li>
+                            </ul>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="article certificate">
+                    <div class="sub_title">
+                        <p>CERTIFICATE</p>
+                    </div>
+
+                    <div class="sub_box">
+                        <ul class="sub_content">
+                            <li>웹디자인 기능사 필기</li>
+                            <li>컴퓨터그래픽스 운용 기능사 필기</li>
+                            <li>(국가공인)GTQ 1급</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!-- about me -->
+
+            <div id="my_skill" class="mont">
+                <div class="title">
+                    <p>MY <span class="highlight">SKILL</span></p>
+                </div>
+                
+                <div class="skill counter">
+                    <ul>
+                        <li>
+                            <span class="count">90</span>
+                            <span class="pie" data-percent="90"></span>
+                            <h3>PHOTOSHOP</h3>
+                        </li>
+                        <li>
+                            <span class="count">85</span>
+                            <span class="pie" data-percent="85"></span>
+                            <h3>ILLURSTRATOR</h3>
+                        </li>
+                        <li>
+                            <span class="count">90</span>
+                            <span class="pie" data-percent="90"></span>
+                            <h3>HTML5</h3>
+                        </li>
+                        <li>
+                            <span class="count" >85</span>
+                            <span class="pie" data-percent="85"></span>
+                            <h3>CSS3</h3>
+                        </li>
+                        <li>
+                            <span class="count" >80</span>
+                            <span class="pie" data-percent="80"></span>
+                            <h3>JQUERY</h3>
+                        </li>
+                        <li>
+                            <span class="count" >75</span>
+                            <span class="pie" data-percent="75"></span>
+                            <h3>JAVASCRIPT</h3>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- my skill -->
+
+            <div id="contact_me" class="mont">
+                <div class="title">
+                    <p><span class="highlight">CONTACT</span>ME</p>
+                </div>
+
+                <div class="contact">
+                    <ul>
+                        <li><span class="sub_bold">E-MAIL</span><p class="sub_content">asjk0229@naver.com</p></li>
+                        <li><span class="sub_bold">KAKAOTALK</span><p class="sub_content">marangju</p></li>
+                        <li><span class="sub_bold">MOBILE</span><p class="sub_content">010-0000-0000</p></li>
+                    </ul>
+                </div>
+            </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="http://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="assets/js/easypiechart.min.js"></script>
+
+    <script>
+        /* =================================
+        skill counter
+        =================================== */
+        if ($('.counter .count').size()) {
+            $c = $('.counter .count');
+
+            $c.each(function () {
+                var $this = $(this);
+                $this.data('target', parseInt($this.html()));
+                $this.data('counted', false);
+                $this.html('0');
+            });
+
+            $(window).bind('scroll', function () {
+                var speed = 3000;
+
+                $c.each(function (i) {
+                    var $t = $(this);
+                    if (!$t.data('counted') && $(window).scrollTop() + $(window).height() >= $t.offset().top) {
+                        $t.data('counted', true);
+
+                        $t.animate({
+                            dummy: 1
+                        }, {
+                            duration: speed,
+                            step: function (now) {
+                                var $this = $(this);
+                                var val = Math.round($this.data('target') * now);
+                                $this.html(val);
+                            },
+                            easing: 'easeInOutQuart'
+                        });
+
+                        // easy pie
+                        $('.pie').easyPieChart({
+                            barColor: '#f82c47',
+                            trackColor: 'transparent',
+                            scaleColor: false,
+                            lineWidth: 14,
+                            size: 150,
+                            lineCap: 'square',
+                            animate: { duration: speed, enabled: true }
+                        });
+                    }
+                });
+            }).triggerHandler('scroll');
+        }
+        
+        $(document).ready(function(){
+            $('#about_main .about_main_txt span').css({
+                top: 0
+            })
+
+            $('.nav div.home').delay(500).css({
+                left: '-15px'
+            }).animate({
+                left: 0,
+                opacity: 1
+            }, 400)
+
+            $('.nav div.menu').delay(500).css({
+                left: '50px'
+            }).animate({
+                left: '35px',
+                opacity: 1
+            }, 400)
+            
+            $('.nav .dot span').css({
+                animation: 'menu_dot .8s .6s forwards'
+            })
+        })
+    </script>
+</body>
+</html>

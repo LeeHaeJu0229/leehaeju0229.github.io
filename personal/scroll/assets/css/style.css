@@ -1,0 +1,797 @@
+﻿@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i');
+
+body,th,td,input,select,textarea,button{font-family: 'Noto Sans KR', 'Open Sans', sans-serif, 'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; letter-spacing: -0.5px;}
+
+*{
+    margin: 0; padding: 0; 
+}
+li{
+    list-style: none;
+}
+a{
+    color:#f82c47;
+    text-decoration: none;
+}
+#wrap{
+    position: relative;
+    overflow: hidden;
+}
+/* #wrap02{
+    width: 100%; height: 2000px;
+    position: absolute; left: 100%; top: 0;
+    overflow-y: scroll
+}
+#wrap02::-webkit-scrollbar {
+    display:none;
+} */
+/* 
+.ddd{
+    background: #222;
+    width: 100%; height: 100%;
+} */
+.mont{
+    font-family: 'Montserrat', sans-serif;
+}
+
+.load_pop{
+    width: 100%; height: 100%;
+    background: #181818;
+    position: absolute; left: 0; top: 0;
+    z-index: 2;
+}
+.load_pop .load_svg{
+    position: relative;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.load_pop .load_svg .st0,
+.load_pop .load_svg .st2{
+    fill:none;
+    stroke:#F82C47;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    animation: load_svg 2.5s forwards;
+    stroke-dasharray: 950; stroke-dashoffset:950;
+}
+.load_pop .load_svg .st1{
+    fill:#F82C47;
+    opacity: 0;
+    animation: load_svg_fill .8s forwards;
+}
+.load_pop .load_svg .st3{
+    stroke:#F82C47;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 950; stroke-dashoffset:950;
+    animation: load_svg 1.7s forwards;
+}
+@keyframes load_svg {
+    0% {stroke-dashoffset:950;}
+    100% {stroke-dashoffset:0;}
+}
+@keyframes load_svg_fill {
+    0% {opacity:0}
+    100% {opacity:1}
+}
+
+
+/* =================================
+   MAIN CSS
+=================================== */
+#main_wrap{
+    width: 100%; height: 100vh;
+    background: #fbfbfb;
+    overflow: hidden;
+}
+
+/* =================================
+   MAIN nav
+=================================== */
+.nav{
+    position: absolute; left: 80px; top: 8%;
+    z-index: 3;
+    width: 160px;
+}
+.nav div {
+    display: inline-block;
+    position: relative;
+    opacity: 0;
+}
+.nav div a{
+    font-size: 12px;
+    color:#cecece;
+    transition: .3s all;
+}
+.nav .dot{
+    left: 18px; top: -3px;
+    opacity: 1;
+} 
+.nav .dot span{
+    display: block;
+    transform: scale(0);
+    width: 3px; height: 3px;
+    background: #f82c47;
+    border-radius: 50%;
+}
+@keyframes menu_dot{
+    0%{transform: scale(0);}
+    12%{transform: scale(2.5);}
+    24%{transform: scale(0);}
+    36%{transform: scale(2.5);}
+    100%{transform: scale(1);}
+}
+.nav .menu a{
+    color:#939393;
+}
+.nav .home:hover a{
+    color:#939393;
+}
+.nav .menu:hover a{
+    color:#f82c47;
+}
+
+.nav .home.list_on a{
+    color: rgba(0,0,0,0.3);
+}
+.nav .menu.list_on a{
+    color: #666;
+}
+.nav .home.list_on:hover a{
+    color: rgba(0,0,0,1);
+}
+.nav .menu.list_on:hover a{
+    color: #fff;
+}
+.nav .dot.list_on span{
+    background: #fff;
+}
+
+/* =================================
+   Main Projuect List btn
+=================================== */
+.project_list{
+    font-weight: 900;
+    color: #f82c47;
+    font-size: 13px;
+    position: absolute; left: 80px; bottom: 14%;
+    z-index: 1;
+    cursor: pointer;
+}
+.project_list .round_line{
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+.project_list .round_line svg{
+    width: 90px; height: 90px;
+}
+.project_list .round_line svg circle{
+    animation: list_round 1.2s 2.8s ease forwards;
+    stroke-dasharray: 236; stroke-dashoffset:236;
+}
+@keyframes list_round {
+    0% {stroke-dashoffset:236;}
+    100% {stroke-dashoffset:0;}
+}
+.project_list .round_line .dot{
+    width: 4px; height: 4px;
+    opacity: 0;
+    background: #f82c47;
+    border-radius: 50%;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+}
+.hover_dot{
+    animation: hover_dot .8s ease forwards;
+}
+@keyframes hover_dot {
+    0% {
+        width: 10px;
+        height: 10px;
+        opacity: 1
+    }
+    10% {
+        width: 0;
+        height: 0;
+    }
+    20% {
+        width: 10px;
+        height: 10px;
+    }
+    30% {
+        width: 0;
+        height: 0;
+    }
+    40% {
+        width: 10px;
+        height: 10px;
+    }
+    100% {
+        width: 4px;
+        height: 4px;
+    }
+}
+
+.project_list .txt_box{
+    display: inline-block;
+    vertical-align: middle;
+    background: #fbfbfb;
+    position: relative; left: -35px; top: 0;
+    transition: .3s all ease;
+    padding: 24px 0;
+    animation: list_txt_padding .5s .7s ease;
+}
+@keyframes list_txt_padding {
+    0% {padding: 0;}
+    100% {padding: 24px 0 ;}
+}
+.project_list .txt_box span{
+    position: relative; left: 0; top: 0;
+    opacity: 0;
+}
+.hover_list_txt{
+    animation: hover_list_txt .75s ease forwards;
+}
+@keyframes hover_list_txt {
+    0% {
+        left: 4px;
+        opacity: 1;
+    }
+    33% {
+        left: 18px;
+    }
+    100% {
+        left: 13px;
+    }
+}
+.leave_list_txt{
+    animation: leave_list_txt .7s cubic-bezier(0, 0, 0.57, 1.63) forwards;
+}
+@keyframes leave_list_txt {
+    0% {
+        left: 13px;
+    }
+    33% {
+        left: 0px;
+    }
+    100% {
+        left: 4px;
+    }
+}
+
+
+
+/* =================================
+   Main Projuect TXT
+=================================== */
+.project_num,
+.project_name{
+    font-size: 105px;
+    font-weight: 900;
+    color:#f82c47;
+    /* color:#ff3737; */
+    /* color: #fa4b41; */
+    height: 90px;
+    z-index: 1;
+}
+.project_num{  
+    position: absolute; left: -15px; top: 50%;
+    transform: translateY(-50%);
+    overflow: hidden;
+}
+.project_name{
+    position: relative; left: 27%; top: 50%;
+    transform: translateY(-50%);
+    transform-origin: center left;
+    transition: .5s ease;
+}
+
+/* project name & num */
+.box_num div,
+.box_name div{
+    float: left;
+    transform: translateY(-20px);
+}
+.box_name{
+    position: absolute; left: 0; top: 0;
+    display: none;
+    height: 90px;
+}
+/* project name animation */
+@keyframes show_up{
+    0% {transform: translateY(180%) rotate(10deg);}
+    100% {transform: translateY(0) rotate(0);}
+}
+@keyframes hide_up{
+    0% {transform: translateY(0) rotate(0);}
+    100% {transform: translateY(-180%) rotate(-10deg);}
+}
+
+@keyframes show_down{
+    0% {transform: translateY(-180%) rotate(-10deg);}
+    100% {transform: translateY(0) rotate(0);}
+}
+
+@keyframes hide_down{
+    0% {transform: translateY(0) rotate(0);}
+    100% {transform: translateY(180%) rotate(10deg);}
+}
+
+.box_name span{
+    position: relative;
+}
+
+.box_num .num_up span{
+    position: absolute; left: 0; top: 100px;
+}
+.box_name .name_up{
+    position: relative; left: 0; top: 100px;
+}
+
+.box_name .rolling {
+    position: relative; left: 0; top: 300%;
+}
+.box_name .rolling span:nth-child(1){
+    position: relative; left: 0; top: 0;
+    transform: translateY(0%);
+}
+.box_name .rolling span:nth-child(2){
+    position: absolute; left: 0; top: 0;
+    transform: translateY(-70%);
+}
+.box_name .rolling span:nth-child(3){
+    position: absolute; left: 0; top: 0;
+    transform: translateY(-140%);
+}
+
+.box_num{
+    overflow: hidden;
+    /* display: inline-block; */
+    width: 150px;
+}
+.project_svg{
+    /* display: inline-block; */
+    position: absolute; left: 17%; top: 50%;
+    transform: translateY(-50%);
+    margin-left: -35px;
+}
+.project_svg .svg_box{
+    width: 60px; height: 60px;
+    display: none;
+}
+.svg_box .flower{
+    fill:none;
+    stroke:#D8D8D8;
+    opacity: 0.9;
+    stroke-linecap:round;
+    stroke-linejoin:round;
+    stroke-miterlimit:10;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 5s ease-in-out forwards;
+}
+@keyframes dash {
+    0% {
+      stroke-dashoffset: 1000;
+    }
+    100% {
+      stroke-dashoffset: 0;
+    }
+}
+
+/* =================================
+   Main Projuect IMG Box
+=================================== */
+.move_box{
+    width: 100%; height: 100vh;
+    transform: rotate(-6deg);
+    margin-top: -90px;
+}
+.move{
+    width: 100%; height: 100vh;
+}
+.move01 .box{
+    background: url('../img/project01_1.jpg') no-repeat;
+    background-size: cover;
+}
+.move02 .box{
+    background: url('../img/project01_2.jpg') no-repeat;
+    background-size: cover;
+}
+.move03 .box{
+    background: url('../img/project03.jpg') no-repeat;
+    background-size: cover;
+}
+.move04 .box{
+    background: url('../img/project04.jpg') no-repeat;
+    background-size: cover;
+}
+.move05 .box{
+    background: url('../img/project05.jpg') no-repeat;
+    background-size: cover;
+}
+.move06 .box{
+    background: url('../img/project06.jpg') no-repeat;
+    background-size: cover;
+}
+
+.box{
+    width: 450px; height: 580px;
+    background: #000;
+    position: absolute; left: 50%; top: 150%;
+    transform: translateX(-50%);
+}
+.move a {
+    display: inline-block;
+    position: relative;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%; height: 100%;
+}
+
+/* 멈출 이미지 animation */
+@keyframes last_up {
+    0% {top: 105%; transform: translateY(-50%) translateX(-50%);}
+    100% {top: 50%; transform: translateY(-50%) translateX(-50%);}
+}
+@keyframes last_up_easing{
+    0% {
+        transform: translateX(-50%);
+        transform-origin: 0% 0%;
+    }
+    50% {
+        transform: translateX(-50%) translateY(-54%) rotate(1deg);
+        transform-origin: 0% 0%;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+        transform-origin: 0% 0%;
+    }
+}
+
+@keyframes last_down {
+    0% { top: -105%; transform: translateX(-50%);}
+    100% { top: 50%; transform: translateX(-50%) translateY(-50%)}
+}
+@keyframes last_down_easing{
+    0% {
+        transform: translateX(-50%);
+        transform-origin: 0% 100%;
+    }
+    50% {
+        transform: translateX(-50%) translateY(-48%) rotate(1deg);
+        transform-origin: 0% 100%;
+    }
+    100% {
+        transform: translateX(-50%) translateY(-50%) rotate(0deg);
+        transform-origin: 0% 100%;
+    }
+}
+
+/* 나가는 이미지 animation */
+@keyframes up_del {
+    0% {top: 50%; transform: translateX(-50%) translateY(-50%)}
+    100% {top: -105%;}
+}
+@keyframes down_del {
+    0% {top: 50%; transform: translateX(-50%) translateY(-50%)}
+    100% {top: 105%;}
+}
+
+
+/* =================================
+   project_list CSS
+=================================== */
+#project_list_warp{
+    width: 0; height: 100vh;
+    background: #f82c47;
+    position: absolute; left: 0; top: 0;
+    z-index: 2;
+    overflow: hidden;
+}
+.list_back_btn{
+    position: absolute; right: 0; top: 0;
+    cursor: pointer;
+    z-index: 9999;
+}
+.list_back_btn .back_txt{
+    display: inline-block;
+    font-size: 14px;
+    font-weight: 900;
+    transform: rotate(-10deg);
+    padding: 40px;
+    color: #212020;
+    /* transition: .2s all ease; */
+}
+.list_back_btn:hover .back_txt{
+    color:#fff;
+}
+
+.project_list_box {
+    position: absolute; left: 0; top: 50%;
+    transform: translateY(-50%) rotate(-2deg);
+    transition: .6s all ease;
+}
+.list_box{
+    position: relative;
+    padding-left: 120px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    transition: .6s all ease;
+    overflow: hidden;
+}
+.list_box .list{
+    width: 480px; height: 620px;
+    background: #000;
+    margin-right: 100px;
+    position: relative;
+    left: -200%;
+    float: left;
+    opacity: 0;
+    transition: .8s all ease;
+    cursor: pointer;
+    pointer-events: none;
+}
+.list_box .list.list01{
+    background: url('../img/list01.jpg') no-repeat;
+    background-size: cover;
+}
+.list_box .list.list02{
+    background: #2a2d2e url('../img/list02.jpg') no-repeat;
+    background-size: cover;
+}
+.list_box .list.list03{
+    background: #00213B url('../img/list03.jpg') no-repeat;
+    background-size: cover;
+
+}
+.list_box .list.list04{
+    background: url('../img/list04.jpg') no-repeat;
+    background-size: cover;
+}
+.list_box .list.list05{
+    background: #00213B url('../img/list05.jpg') no-repeat;
+    background-size: cover;
+}
+.list_box .list.list06{
+    background: #00213B url('../img/list06.jpg') no-repeat;
+    background-size: cover;
+}
+.list_box .list:hover{
+    transform: translateY(-25px) rotate(-2deg);
+}
+
+.list_box .list .list_name_box{
+    width: 100%;
+    font-size: 20px;
+    font-weight: 900;
+    color: #fff;
+    position: absolute; left: 50%; top: 50%;
+    transform: translate(-50%, -50%);
+    transform-origin: bottom;
+    height: 17px;
+    /* background: #222;
+    padding: 5px 15px; */
+    overflow: hidden;
+    opacity: 0;
+    transition: .5s all ease;
+    text-align: center;
+}
+.list_name {
+    transform: translateY(-4px);
+    display: inline-block;
+    /* background: rgba(0,0,0,0.4); */
+}
+.list_name div{
+    float: left;
+}
+.list_name span{
+    position: relative;
+    top: 20px;
+}
+.list_name .name_up{
+    position: relative; left: 0; top: 20px;
+}
+
+@media screen and (max-width: 1440px) {
+    .project_num,
+    .project_name{
+        font-size: 95px;
+        height: 75px;
+    }
+    .box_name{
+        height: 75px;
+    }
+    .move_box{
+        margin-top: -75px;
+    }
+    
+    .list_box {
+        padding-left: 100px;
+    }
+    .list_box .list {
+        width: 385px;
+        height: 500px;
+        margin-right: 70px;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .project_name{
+        left: 25%;
+    }
+    .project_num,
+    .project_name{
+        font-size: 85px;
+        height: 65px;
+    }
+    .box_name{
+        height: 65px;
+    }
+    .move_box{
+        margin-top: -65px;
+    }
+
+    .list_box {
+        padding-left: 90px;
+    }
+    .list_box .list {
+        width: 340px;
+        height: 435px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .project_name{
+        left: 22%;
+    }
+    .project_svg{
+        display: none;
+    }
+    .project_list {
+        bottom: 9%;
+    }
+    .box {
+        width: 400px;
+        height: 530px;
+    }
+}
+
+@media screen and (max-width: 980px) {
+    .project_num,
+    .project_name{
+        font-size: 75px;
+        height: 55px;
+    }
+    .box_name{
+        height: 55px;
+    }
+    .move_box{
+        margin-top: -55px;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .project_num{
+        display: none;
+    }
+    .project_name{
+        left: 0
+    }
+    .box_name{
+        text-align: center;
+        position: relative;
+        left: -10px;
+    }
+    .box_name:nth-child(2){
+        position: relative; top: -100%
+    }
+    .box_name:nth-child(3){
+        position: relative; top: -200%
+    }
+    .box_name div{
+        display: inline-block;
+        float: none;
+        margin-right: -25px;
+        transform: translateY(-19px);
+    }
+    .box {
+        width: 360px;
+        height: 490px;
+    }
+}
+
+@media screen and (max-width: 620px) {
+    .project_num,
+    .project_name{
+        font-size: 60px;
+        height: 45px;
+    }
+    .box_name{
+        height: 45px;
+    }
+    .box_name div{
+        margin-right: -20px;
+        transform: translateY(-14px);
+    }
+    .move_box{
+        margin-top: -45px;
+    }
+    .box {
+        width: 300px;
+        height: 420px;
+    }
+
+    .list_box .list {
+        width: 290px;
+        height: 375px;
+    }
+    .list_box .list .list_name_box {
+        font-size: 18px;
+    }
+    .list_name {
+        transform: translateY(0px);
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .nav {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+    .project_num,
+    .project_name{
+        font-size: 50px;
+        height: 40px;
+    }
+    .box_name{
+        height: 40px;
+    }
+    .box_name div{
+        margin-right: -17px;
+        transform: translateY(-12px);
+    }
+    .move_box{
+        margin-top: -40px;
+    }
+    .box {
+        width: 260px;
+        height: 360px;
+    }
+
+    .list_box {
+        padding-left: 70px;
+    }
+    .list_box .list {
+        width: 215px;
+        height: 280px;
+        margin-right: 50px;
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .project_num,
+    .project_name{
+        font-size: 40px;
+        height: 30px;
+    }
+    .box_name{
+        height: 30px;
+    }
+    .box_name div{
+        margin-right: -13px;
+        transform: translateY(-10px);
+    }
+    .move_box{
+        margin-top: -30px;
+    }
+    .box {
+        width: 240px;
+        height: 340px;
+    }
+}
+
+    
+
