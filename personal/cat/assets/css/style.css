@@ -4,17 +4,14 @@
     height: 100vh;
     background: #f3cbc7;
     position: relative;
-}
-#wrap.checked{
-    background: #00111c;
     transition: .6s background;
 }
-.myCat{
-    
+#wrap.them_dark{
+    background: #00111c;
 }
 
-
-.cat-container {
+#myCat {}
+#myCat .cat_container {
     display: inline-block;
     position: absolute;
     height: auto;
@@ -23,7 +20,7 @@
     transform: translate(-50%, -50%);
 }
 
-.c-window{
+#myCat .cat_window{
     display: block;
     position: relative;
     width: 235px; height: 235px;
@@ -34,7 +31,7 @@
     box-shadow: 0px 0px 5px rgba(0,0,0,0.25) inset;
     overflow: hidden;
 }
-.c-window .the-sun{
+#myCat .cat_window .the-sun{
     display: block;
     position: relative;
     top: 25px;
@@ -47,7 +44,7 @@
     box-shadow: 0px 0px 40px #FFEE94;
     transition: top .5s ease-in-out;
 }
-.c-window .the-moon{
+#myCat .cat_window .the-moon{
     position: relative;
     height: 26px; width: 26px;
     top: 200px;
@@ -59,7 +56,7 @@
     display: block;
 }
 
-.c-window .the-cat{
+#myCat .cat_window .the_cat{
     display: block;
     position: absolute;
     bottom: -20px;
@@ -69,7 +66,7 @@
     transition: bottom .25s ease-in-out;
     z-index: 1;
 }
-.c-window .the-cat:before{
+#myCat .cat_window .the_cat:before{
     content: "";
     width: 0; height: 0;
     border-left: 0px solid transparent;
@@ -78,7 +75,7 @@
     top: -25px; left: 0;
     position: absolute;
 }
-.c-window .the-cat:after{
+#myCat .cat_window .the_cat:after{
     content: "";
     width: 0; height: 0;
     border-right: 0px solid transparent;
@@ -87,20 +84,20 @@
     top: -25px; right: 0;
     position: absolute;
 }
-.c-window .the-cat:hover{
+#myCat .cat_window .the_cat:hover{
     display: block;
     position: absolute;
     bottom: -40px;
 }
 
-.c-window .the-cat .eyes{
+#myCat .cat_window .the_cat .eyes{
     display: block;
     position: absolute;
     height: 40px; width: 40px;
     border-radius: 100%;
     bottom: 80px;
 }
-.c-window .the-cat:hover .eyes{
+#myCat .cat_window .the_cat:hover .eyes{
     animation:eyemovement 0.9s ease-in-out 1;
 }
 @keyframes eyemovement {
@@ -108,15 +105,15 @@
   50% {transform:scaley(0)}
   100% {transform:scaley(1)}
 }
-.c-window .the-cat .eyes.left{
+#myCat .cat_window .the_cat .eyes.left{
     left: 12px;
     background: #f6de7b;
 }
-.c-window .the-cat .eyes.right{
+#myCat .cat_window .the_cat .eyes.right{
     right: 12px;
     background: #accdff;
 }
-.c-window .the-cat .eyes .pupil{
+#myCat .cat_window .the_cat .eyes .pupil{
     display: block;
     position: relative;
     background: #000;
@@ -128,7 +125,7 @@
     transition: width .5s ease-in-out;
 }
 
-.c-window .the-cat .text{
+#myCat .cat_window .the_cat .text{
     text-align: center;
     position: absolute;
     left: 50%; top: -25px;
@@ -138,13 +135,13 @@
     color:#555;
     opacity:0;
 }
-.c-window .the-cat:hover .text {
+#myCat .cat_window .the_cat:hover .text {
     opacity:1;
     top: -60px;
     transition: 0.5s ease;
 }
 
-.c-window .the-cat .nose{
+#myCat .cat_window .the_cat .nose{
     display: block;
     position: relative;
     height: 0; width: 0;
@@ -155,68 +152,90 @@
     margin: 0 auto;
     top: 50px;
 }
-.c-window .the-cat .noseHair .whisker{
+#myCat .cat_window .the_cat .nose_hair .whisker{
     background-color: #000;
     display:block;
     position: absolute;
 }
-.c-window .the-cat .noseHair .whisker.one{
+#myCat .cat_window .the_cat .nose_hair .whisker.one{
     width: 23px; height: 2px;
     top:64px;
 }
-.c-window .the-cat .noseHair .whisker.two{
+#myCat .cat_window .the_cat .nose_hair .whisker.two{
     width: 23px; height: 2px;
     top:71px;
 }
-.c-window .the-cat .noseHair.left .whisker{
+#myCat .cat_window .the_cat .nose_hair.left .whisker{
     left:-9px;
 }
-.c-window .the-cat .noseHair.right .whisker{
+#myCat .cat_window .the_cat .nose_hair.right .whisker{
     right:-9px;
 }
 
-input[type=checkbox] {
+#myCat .day-night-cont {
+    display: block;
+    position: absolute;
+    width: 180px;
+    margin: 0 auto;
+    left: -45px; right: 0; top: 0; bottom:0;
+    height: 40px;
+    top: 0px;
+}
+#myCat .the-sun{
+    display: block;
+    height: 20px; width: 20px;
+    border-radius: 50%;
+    background: #ffeaa2;
+    box-shadow: 0px 0px 30px #FFEE94;
+}
+#myCat .the-moon {
+    position: relative;
+    height: 20px; width: 20px;
+    border-radius: 100%;
+    background: #EEE;
+    box-shadow: 0px 0px 10px #EEE;
+    transition: 0.4s;
+}
+#myCat .the-moon .moon-inside {
+    display: block;
+    position: absolute;
+    left: 8px;
+    height: 20px; width: 20px;
+    border-radius: 50%;
+    background: #f3cbc7;
+    transition: 0.4s;
+}
+
+/* toggle */
+#myCat .cat_switch {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+#myCat .cat_switch .btn_switch {
+    display: block;
+    height: 40px; width: 100px;
+    margin: 0 15px;
+}
+#myCat .btn_switch #catToggle{
     position: absolute;
     top: -9999px; left: -9999px;
 }
-input#toggle[type=checkbox]{
-    display:none;
-}
-
-label {
-    position: absolute;
-    height: 40px; width: 120px;
-    display: block;
-    top: 0px; bottom: 0; right: 0; left:0;
-    z-index: 9999;
-    cursor: pointer;
-    margin: 0 auto;
-}
-
-.switch {
-    display: block;
+#myCat .cat_switch .btn_switch label {
     position: relative;
+    display: block;
+    width: 100%;
+    height: 100%;
     border-bottom: 1px solid #FFF;
     border-radius: 25px;
     background: #ffbab2;
     box-shadow: inset 0 0 10px rgba(230,113,97,0.75);
-    height: 40px; width: 100px;
-    margin: 0px auto 30px auto;
+    cursor: pointer;
 }
-.switch.checked {
-    background:#4f6d82;
-    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
-    border-bottom: 1px solid #7C92A1;
-    transition:0.5s ease;
-}
-
-.switch.checked .button {
-    background: #7C92A1;
-    border-top: 1px solid rgba(225,225,225,0.5);
-    border-bottom: 1px solid rgba(0,0,0,0.5);
-    transition:0.5s ease;
-}
-.switch .button{
+#myCat .btn_switch .obj_inside {
     display: block;
     position: absolute;
     border-top: 1px solid #FFF;
@@ -225,9 +244,11 @@ label {
     background: #ffccc7;
     height: 32px; width: 32px;
     top: 3px; left: 4px;
-    box-shadow: 0 0 2px rgba(0,0,0,0.25)
+    box-shadow: 0 0 2px rgba(0,0,0,0.25);
+    transition: left .5s cubic-bezier(0.68,-0.55,0.265,1.55);
 }
-.switch .button .b-inside{
+#myCat .btn_switch .obj_inside::before{
+    content: '';
     display: block;
     position: absolute;
     border: 1px solid #ddd;
@@ -238,74 +259,31 @@ label {
     box-shadow: 0 0 2px rgba(0,0,0,0.25)
 }
 
-.day-night-cont {
-    display: block;
-    position: absolute;
-    width: 180px;
-    margin: 0 auto;
-    left: -45px; right: 0; top: 0; bottom:0;
-    height: 40px;
-    top: 0px;
-}
-.day-night-cont .the-sun{
-    display: block;
-    position: absolute;
-    left: 30px; top: 10px;
-    height: 20px; width: 20px;
-    border-radius: 50%;
-    background: #ffeaa2;
-    box-shadow: 0px 0px 30px #FFEE94;
-}
-.day-night-cont .the-moon {
-    display: block;
-    position: absolute;
-    right: -14px; top: 10px;
-    height: 20px; width: 20px;
-    border-radius: 100%;
-    background: #EEE;
-    box-shadow: 0px 0px 10px #EEE;
-}
-.day-night-cont .the-moon .moon-inside {
-    display: block;
-    position: absolute;
-    left: 8px;
-    height: 20px; width: 20px;
-    border-radius: 50%;
-    background: #f3cbc7;
-}
-.day-night-cont .the-moon .moon-inside.checked {
+/* night ani */
+#myCat.is_active .the-moon .moon-inside {
     background: #00111c;
+}
+#myCat.is_active .btn_switch label {
+    background:#4f6d82;
+    box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+    border-bottom: 1px solid #7C92A1;
+    transition:0.5s ease;
+}
+#myCat.is_active .btn_switch .obj_inside {
+    left: 64px;
+    background: #7C92A1;
+    border-top: 1px solid rgba(225,225,225,0.5);
+    border-bottom: 1px solid rgba(0,0,0,0.5);
     transition:0.5s ease;
 }
 
-/* toggle */
-.switch .button {
-    transition: left .5s cubic-bezier(0.68,-0.55,0.265,1.55);
-}
-
-input[type=checkbox]:checked ~ .switch .button {
-    position: absolute;
-    left: 64px;
-}
-input[type=checkbox]:checked ~ .switch .button .b-inside {
-    left: 7.5px;
-}
-
-/* night ani */
-input[type=checkbox]:checked ~ .c-window {
+#myCat.is_active .cat_window {
     background: #002238;
 }
-input[type=checkbox]:checked ~ .c-window .the-sun{
-    top: 200px;
-}
-input[type=checkbox]:checked ~ .c-window .the-moon{
-    top: 0;
-}
-
-input[type=checkbox]:checked ~ .c-window .the-cat{
+#myCat.is_active .cat_window .the_cat{
     background: #4E4D5B;
 }
-input[type=checkbox]:checked ~ .c-window .the-cat:before{
+#myCat.is_active .cat_window .the_cat:before{
     content: "";
     width: 0; height: 0;
     border-left: 0px solid transparent;
@@ -314,7 +292,7 @@ input[type=checkbox]:checked ~ .c-window .the-cat:before{
     top: -25px; left: 0;
     position: absolute;
 }
-input[type=checkbox]:checked ~ .c-window .the-cat:after{
+#myCat.is_active .cat_window .the_cat:after{
     content: "";
     width: 0; height: 0;
     border-right: 0px solid transparent;
@@ -324,31 +302,28 @@ input[type=checkbox]:checked ~ .c-window .the-cat:after{
     position: absolute;
 }
 
-input[type=checkbox]:checked ~ .c-window .the-cat .eyes{
+#myCat.is_active .cat_window .the_cat .eyes{
     box-shadow: 0px 0px 8px rgba(255,255,255,1);
 }
-input[type=checkbox]:checked ~ .c-window .the-cat .eyes .pupil{
+#myCat.is_active .cat_window .the_cat .eyes .pupil{
     height: 80%; width: 32px;
 }
-input[type=checkbox]:checked ~ .c-window .the-cat:hover .eyes{
+#myCat.is_active .cat_window .the_cat:hover .eyes{
     height: 40px;
     bottom: 80px;
 }
-
-input[type=checkbox]:checked ~ .c-window .the-cat .text{
+#myCat.is_active .cat_window .the_cat .text{
     color:#fff;
 }
 
-
-
 /* .hearts {position: relative;} */
-.hearts>.particle {
+#myCat .hearts>.particle {
     opacity:0;
     position: absolute;
     background-color:rgba(204,42,93,1);
     animation: hearts 3s ease-in infinite;
 }
-.hearts>.particle:before, .hearts>.particle:after {
+#myCat .hearts>.particle:before, .hearts>.particle:after {
     position: absolute;
     content: '';
     border-radius:100px;
@@ -358,10 +333,10 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     height:100%;
     background-color:rgba(204,42,93,1);
 }
-.hearts>.particle:before{
+#myCat .hearts>.particle:before{
     transform:translateX(-50%);
 }              
-.hearts>.particle:after {
+#myCat .hearts>.particle:after {
     transform:translateY(-50%);
 }              
 @keyframes hearts {
@@ -381,25 +356,24 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
 
 
 /* icon folder */
-#left_side{
+#left_side, #right_side{
     position: absolute;
-    top: 0;
-    left: 40px;
-    height: 100vh;
+    top: 50%;
+    transform: translateY(-50%);
+}
+#left_side {
+  left: 40px;
 }
 #right_side {
-    position: absolute;
-    top: 0;
-    right: 40px;
-    height: 100vh;
+  right: 40px;
 }
 .folder{
     text-align: center;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
 }
 .folder .ico_box{
+    display: flex ;
+    flex-direction: column;
     padding: 40px 55px 20px;
     border-radius: 10px;
     transition: .4s background ease-in-out,
@@ -409,25 +383,25 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     background: rgba(255,255,255,0.2);
     box-shadow: 0px 0px 10px rgba(0,0,0,0.1) inset;
 }
-.folder .ico_box .ico{
+.folder .ico_box .btn_ico{
     margin-bottom: 40px;
 }
-.folder .ico_box .ico span{
+.folder .ico_box .btn_ico .ico{
+  max-width: 100%;
+}
+.folder .ico_box .btn_ico .text{
     display: block;
     color: #fff;
     font-size: 12px;
     text-shadow: 1px 1px 5px rgba(0,0,0,0.2);
 }
-.folder .ico_box .ico span.checked{
+.folder .ico_box .btn_ico .text.checked{
     text-shadow: 0px 0px 10px rgba(255,255,255,0.6);
 }
-.folder .ico_box .ico a{
-    display: inline-block;
-}
-.folder .ico_box .ico:hover a{
+.folder .ico_box .btn_ico:hover .ico{
     animation: jello 1s;
 }
-.folder .ico_box .ico:hover span{
+.folder .ico_box .btn_ico:hover span{
     animation: text_downUp .7s;
 }
 @keyframes text_downUp{
@@ -438,6 +412,10 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
 
 
 /* browser */
+.browser {
+    border-radius: 0 0 10px 10px;
+    overflow: hidden;
+}
 .browser, .browser_sec{
     width: 65%;
     height: 80vh;
@@ -456,10 +434,7 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     transform: translate(-50%, -50%) scale(1);
     opacity: 1;
 }
-.browser_top{
-    position: absolute;
-    left: 0; right: 0; top: 0;
-}
+.browser_top{}
 .browser_top .btn_box{
     background: #686868;
     border-radius: 10px 10px 0 0;
@@ -487,15 +462,15 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     background: #85d290;
 }
 .browser_top .folder_tit{
+    display: flex;
     background: #e4e4e4;
     overflow: hidden;
     padding: 8px;
 }
 .browser_top .folder_tit .arr_box{
+    flex-shrink: 0;
     width: 95px;
-    float: left;
     padding: 4px;
-    box-sizing: border-box;
 }
 .browser_top .folder_tit .arr_box img{
     display: inline-block;
@@ -505,10 +480,9 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
 .browser_top .folder_tit .arr_box img:last-child {
     margin-left: 7px;
 }
-.browser_top .folder_tit em{
-    width: calc(100% - 95px);
-    float: left;
-    display: inline-block;
+.browser_top .folder_tit .url_box{
+    flex: 1;
+    display: block;
     background: #fff;
     font-size: 12px;
     color:#333;
@@ -522,24 +496,18 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     background: #f7f7f7;
     height: calc(100% - 89px);
     border-radius: 0 0 10px 10px;
-    margin-top: 89px;
-    box-sizing: border-box;
-    overflow-y: auto;
-}
-#memories .browser_body{
-    padding-bottom: 2.2px;
-    box-sizing: border-box;
-}
-#about .browser_body,
-#polygon .browser_body,
-#template .browser_body{
     overflow: hidden;
 }
-.object_box {
-    padding: 45px 45px 0;
+.browser_body .object_list,
+.browser_body .design_box {
+  overflow-y: auto;
+}
+.object_list {
+    height: 100%;
+    padding: 45px;
     /* overflow: hidden; */
 }
-.object_box .object{
+.object_list .object{
     width: calc((100% - 5% * 3) / 4);
     float: left;
     margin-right: 5%;
@@ -547,10 +515,10 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     text-align: center;
     margin-bottom: 45px;
 }
-.object_box .object:nth-child(4n){
+.object_list .object:nth-child(4n){
     margin-right: 0;
 }
-.object_box .object a {
+.object_list .object {
     display: block;
     box-shadow: 0px 0px 5px rgba(0,0,0,0.1);
     border-radius: 5px;
@@ -558,7 +526,7 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     transform: translateY(0);
     padding: 10px 10px 6px;
 }
-.object_box .object:hover a{
+.object_list .object:hover{
     box-shadow: 0px 0px 10px rgba(241,105,117,0.2);
     animation: object_upDown .6s ;
 }
@@ -566,20 +534,20 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     20% {transform: translateY(-5px)};
     100% {transform: translateY(0)};
 }
-.object_box .object em{
+.object_list .object em{
     font-size: 12px;
     display: block;
 }
-.object_box .object img{
+.object_list .object img{
     width: 100%;
 }
 
-.browser_body.design_box{
+/* .browser_body.design_box{
     padding: 5% 10%;
     background: #333;
     overflow-x: hidden;
     overflow-y: scroll !important;
-}
+} */
 .iframe_box {
     width: 100%; height: 100%;
     display: none;
@@ -591,6 +559,14 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
 
 .design_box{
     display: none;
+    height: 100%;
+    padding: 5% 10%;
+    background: #333;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.design_box .design_img {
+  height: 100%;
 }
 .design_box img{
     width: 100%;
@@ -606,7 +582,6 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     width: 100%;
     height: calc(100% - 5.5px);
     padding-bottom: 2.5px;
-    box-sizing: border-box;
 }
 
 .slider {
@@ -678,23 +653,7 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     100% {opacity: 0;}
 }
 
-
-@media (max-width: 1480px){
-    .object_box .object{
-        width: calc((100% - 5% * 2) / 3);
-    }
-    .object_box .object:nth-child(4n){
-        margin-right: 5%;
-    }
-    .object_box .object:nth-child(3n){
-        margin-right: 0;
-    }
-}
 @media (max-width: 1280px){
-    .cat-container{
-        transform: translate(-50%, -50%) scale(0.9);
-    }
-    
     #left_side {
         left: 30px;
     }
@@ -704,155 +663,77 @@ input[type=checkbox]:checked ~ .c-window .the-cat .text{
     .folder .ico_box {
         padding: 30px 45px 10px;
     }
-    .folder .ico_box .ico {
+    .folder .ico_box .btn_ico {
         margin-bottom: 30px;
-    }
-    .folder .ico_box .ico img{
-        width: 70px;
     }
 
     .browser {
-        width: 70%;
+        width: 80%;
     }
-    
 }
-@media (max-width: 980px){
-    .object_box .object{
-        width: calc((100% - 5%) / 2);
-        margin-right: 5%;
+@media (max-width: 1024px){
+    .object_list .object{
+        width: calc((100% - 10%) / 3);
     }
-    .object_box .object:nth-child(3n){
-        margin-right: 5%;
-    }
-    .object_box .object:nth-child(2n){
+    .object_list .object:nth-child(3n){
         margin-right: 0;
     }
 }
-@media (max-width: 850px){
-    .myCat {
+@media (max-width: 768px){
+    #myCat {
         height: 60%;
         position: relative;
     }
-    .cat-container{
+    .cat_container{
         transform: translate(-50%, -50%) scale(1);
     }
 
     #content{
         position: relative;
     }
-    #left_side {
-        top: 0;
-        left: 50%;
-        transform: translateX(-50%);
+    #left_side, #right_side {
+        position: static;
         width: 100%;
-        height: 130px;
-    }
-    #right_side {
-        top: 130px;
-        right: 50%;
-        transform: translateX(50%);
-        width: 100%;
-        height: 130px;
-    }
-
-    .folder {
-        text-align: center;
-        position: relative;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 85%;
-        margin: 0 auto;
-    }
-    .folder .ico_box {
-        padding: 20px 0;
-    }
-    .folder .ico_box .ico {
-        display: inline-block;
-        margin: 0 3%;
-    }
-    .folder .ico_box .ico img{
-        width: 77px;
-    }
-}
-@media (max-width: 680px){
-    .browser {
-        width: 80%;
-    }
-
-    .cat-container{
-        transform: translate(-50%, -50%) scale(0.9);
-    }
-
-    .folder .ico_box .ico {
-        display: inline-block;
-        margin: 0 2%;
-    }
-    .folder .ico_box .ico img{
-        width: 70px;
-    }
-}
-@media (max-width: 580px){
-    .object_box .object{
-        width: 100%;
-        margin-right: 0;
+        height: auto;
+        transform: none;
     }
 
     .folder {
         width: 90%;
+        margin: 0 auto;
+    }
+    .folder .ico_box {
+        flex-direction: row;
+        justify-content: center;
+        padding: 20px 0;
+    }
+    .folder .ico_box .btn_ico {
+        display: inline-block;
+        margin: 0 3%;
+    }
+
+    .object_list .object{
+        width: calc((100% - 10%) / 2);
+    }
+    .object_list .object:nth-child(3n){
+        margin-right: 5%;
+    }
+    .object_list .object:nth-child(2n){
+        margin-right: 0;
     }
 }
-
-@media (max-width: 580px){
-    .folder {
-        width: 95%;
+@media (max-width: 480px){
+    .object_list .object{
+        width: 100%;
+        margin-right: 0;
     }
-    .folder .ico_box .ico {
-        margin: 0 1.5%;
-    }
-    .folder .ico_box .ico img{
-        width: 65px;
-    }
-}
-
-@media (max-width: 460px){
-    .cat-container{
-        transform: translate(-50%, -50%) scale(0.8);
-    }
-    
-    .folder .ico_box .ico {
-        margin: 0 1%;
-    }
-    .folder .ico_box .ico img{
-        width: 60px;
-    }
-    .folder .ico_box .ico span {
+    .folder .ico_box .btn_ico .text {
         font-size: 11px;
     }
 }
 
-@media (max-width: 380px){
-    .folder .ico_box .ico {
-        margin: 0 1%;
-    }
-    .folder .ico_box .ico img{
-        width: 55px;
-    }
-}
-
-@media (max-width: 340px){ 
-    .folder {
-        width: 100%;
-    }
-    .folder .ico_box .ico {
-        margin: 0 1%;
-    }
-    .folder .ico_box .ico img{
-        width: 50px;
-    }
-}
-
-@media (max-height: 650px){
+@media (max-height: 600px){
     #content {
-        top: -40px;
+        top: -30px;
     }
 }

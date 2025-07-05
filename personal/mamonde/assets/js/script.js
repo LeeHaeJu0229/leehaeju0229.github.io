@@ -54,7 +54,7 @@ $(document).ready(function(){
         $('.main_dot .line').eq(tmp).addClass('on');
 
         main_num();
-        console.log(tmp)
+        // console.log(tmp)
     });
 
     $('.main_slide_btn.prev').click(function(){
@@ -64,7 +64,7 @@ $(document).ready(function(){
         count--;
         tmp = count % main_slide_length;
         tmp = $('.main_dot .line.on').index();
-        console.log(tmp)
+        // console.log(tmp)
         
         main_slide('.main_slide', (tmp - 1), "-100%", tmp, "100%");
 
@@ -224,7 +224,7 @@ $(document).ready(function(){
     // 이벤트 슬라이드**
     var event_slide_index = $('.event_slide').index();
     var slide_wid = parseInt($('.event_slide').width()) + 15;
-    console.log(slide_wid)
+    // console.log(slide_wid)
     $('.event_slide').eq(0).css({
         left: 0
     })

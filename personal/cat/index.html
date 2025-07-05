@@ -1,1132 +1,657 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>My CAT</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>My CAT</title>
 
-    <!-- web_font -->
-    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+	<!-- web_font -->
+	<link href="https://fonts.googleapis.com/css?family=Abril+Fatface" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
 
-    <!-- css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/lightgallery.css"/>
+	<!-- css -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
 
-    <link href="assets/css/reset.css" rel="stylesheet">
-    <link href="assets/css/style.css" rel="stylesheet">
+	<link href="assets/css/reset.css" rel="stylesheet">
+	<link href="assets/css/style.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="wrap">
-        <div class="myCat">
-            <div class="cat-container">
-                <input type="checkbox" id="toggle"/>
-                <label for="toggle"></label>
-            
-                <div class="day-night-cont">
-                    <span class="the-sun"></span>
-                    <div class="the-moon"><span class="moon-inside"></span></div>
-                </div>
-            
-                <div class="switch">
-                    <div class="button">
-                        <div class="b-inside"></div>
-                    </div>
-                </div>
-            
-                <div class="c-window hearts">
-                    <span class="the-sun"></span>
-                    <span class="the-moon"></span>
-            
-                    <div class="the-cat">
-                        <span class="text">Let's see<br>My <b>WORK</b></span>
-            
-                        <div class="cat-face">
-                        <div class="eyes left"><span class="pupil"></span></div>
-                        <div class="eyes right"><span class="pupil"></span></div>  
-            
-                        <span class="nose"></span>
-            
-                        <div class="noseHair left">
-                            <span class="whisker one"></span>
-                            <span class="whisker two"></span>
-                        </div>
-                        <div class="noseHair right">
-                            <span class="whisker one"></span>
-                            <span class="whisker two"></span>
-                        </div>
-                        </div>  
-                    </div>
-                </div>
-            </div>	
-            <!-- cat-container -->
+	<div id="wrap">
+		<div id="myCat">
+			<div class="cat_container">
+				<div class="cat_switch">
+					<span class="the-sun"></span>
+          <div class="btn_switch">
+            <input type="checkbox" id="catToggle">
+            <label for="catToggle"><span class="obj_inside"></span></label>
+          </div>
+					<span class="the-moon"><span class="moon-inside"></span></span>
+				</div>
+			
+				<div class="cat_window hearts">
+					<span class="the-sun"></span>
+					<span class="the-moon"></span>
+			
+					<div class="the_cat">
+						<span class="text">Let's see<br>My <b>WORK</b></span>
+			
+						<div class="cat_face">
+						<div class="eyes left"><span class="pupil"></span></div>
+						<div class="eyes right"><span class="pupil"></span></div>  
+			
+						<span class="nose"></span>
+			
+						<div class="nose_hair left">
+							<span class="whisker one"></span>
+							<span class="whisker two"></span>
+						</div>
+						<div class="nose_hair right">
+							<span class="whisker one"></span>
+							<span class="whisker two"></span>
+						</div>
+						</div>  
+					</div>
+				</div>
+			</div>	
+			<!-- cat_container -->
+		</div>
+		<!-- myCat -->
+
+		<div id="content">
+			<div id="left_side">
+				<div class="folder">
+					<div class="ico_box">
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico01.png" alt="">
+							<span class="text">About Me</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable btn_go_page">
+              <img class="ico" src="assets/img/ico02.png" alt="">
+							<span class="text">Memoires</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico03.png" alt="">
+							<span class="text">Mamonde</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico04.png" alt="">
+							<span class="text">web-haeju</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico05.png" alt="">
+							<span class="text">Parallax</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- left_side -->
+
+			<div id="right_side">
+				<div class="folder">
+					<div class="ico_box">
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico06.png" alt="">
+							<span class="text">Coding</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico07.png" alt="">
+							<span class="text">Photoshop</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico08.png" alt="">
+							<span class="text">Illurstrator</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico09.png" alt=" js_prepare">
+							<span class="text">Octopus</span>
+						</button>
+
+						<button type="button" class="btn_ico draggable">
+              <img class="ico" src="assets/img/ico10.png" alt=" js_prepare">
+							<span class="text">Rocket</span>
+						</button>
+					</div>
+				</div>
+			</div>
+			<!-- right_side -->
+		</div>
+		<!-- content -->
+
+
+		<!-- S: browser -->
+		<div id="about" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box"><a href="/about/" target="_blank" title="새창에서 자기소개 사이트 보기">About me</a></em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="object_list">
+					<div class="object">
+						<button type="button" class="btn_object btn_go_page">
+							<img src="assets/img/about_tumb_01.jpg" alt="thumbnail_01">
+							<em>About me</em>
+						</button>
+					</div>
+					<div class="object">
+						<a href="../portfolio_pdf.pdf" class="btn_object" target="_blank">
+							<img src="assets/img/about_tumb_02.jpg" alt="thumbnail_01">
+							<em>Lee Hae Ju : pdf</em>
+						</a>
+					</div>
+				</div>
+				<div class="iframe_box">
+					<iframe class="iframe" src="/about/" name="about"></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- about browser -->
+
+		<div id="memories" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box"><a href="../scroll/" target="_blank" title="새창에서 메모리즈 사이트 보기">../scroll/</a></em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="iframe_box">
+					<iframe class="iframe" src="../scroll/" name="memories"></iframe>
+				</div>
+			</div>
+		</div>
+		<!-- memories browser -->
+
+		<div id="mamonde" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box"><a href="../mamonde/" target="_blank" title="새창에서 마몽드 리디자인 사이트 보기">Mamonde</a></em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="object_list">
+					<div class="object">
+						<a href="../mamonde/" class="btn_object" target="_blank">
+							<img src="assets/img/mamonde_tumb_01.jpg" alt="thumbnail_01">
+							<em>Mamonde : Website</em>
+						</a>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="0">
+							<img src="assets/img/mamonde_tumb_03.jpg" alt="thumbnail_01">
+							<em>Main Design</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="1">
+							<img src="assets/img/mamonde_tumb_04.jpg" alt="thumbnail_01">
+							<em>Sub Design 01</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="2">
+							<img src="assets/img/mamonde_tumb_05.jpg" alt="thumbnail_01">
+							<em>Sub Design 02</em>
+						</button>
+					</div>
+				</div>
+
+				<div class="iframe_box">
+					<iframe class="iframe" src="../scroll/mamonde.html" name="mamonde">
+					</iframe>
+				</div>
+
+        <div class="design_box">
+          <div class="design_img"><img src="assets/img/mamonde_design_01.jpg" alt="mamonde_design_01"></div>
+          <div class="design_img"><img src="assets/img/mamonde_design_02.jpg" alt="mamonde_design_02"></div>
+          <div class="design_img"><img src="assets/img/mamonde_design_03.jpg" alt="mamonde_design_03"></div>
         </div>
-        <!-- myCat -->
+			</div>
+		</div>
+		<!-- mamonde browser -->
 
-        <div id="content">
-            <div id="left_side">
-                <div class="folder">
-                    <div class="ico_box">
-                        <!-- <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico01.png" alt="ico01">
-                            </a>
-                            <span>About Me</span>
-                        </div> -->
+		<div id="polygon" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box"><a href="../polygon/" target="_blank" title="새창에서 웹디자이너 해주 포트폴리오 보기">Polygon</a></em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="object_list">
+					<div class="object">
+						<button type="button" class="btn_object btn_go_page">
+							<img src="assets/img/polygon_tumb_01.jpg" alt="thumbnail_01">
+							<em>web-haeju : Website</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object js_prepare">
+							<img src="assets/img/polygon_tumb_02.jpg" alt="thumbnail_01">
+							<em>web-haeju : description</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="0">
+							<img src="assets/img/polygon_tumb_03.jpg" alt="thumbnail_01">
+							<em>Skecth</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="1">
+							<img src="assets/img/polygon_tumb_04.jpg" alt="thumbnail_01">
+							<em>Prototype</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="2">
+							<img src="assets/img/polygon_tumb_05.jpg" alt="thumbnail_01">
+							<em>Main Design</em>
+						</button>
+					</div>
+				</div>
 
-                        <div class="ico draggable goPage">
-                            <a href="#">
-                                <img src="assets/img/ico02.png" alt="ico02">
-                            </a>
-                            <span>Memoires</span>
-                        </div>
+				<div class="iframe_box">
+					<iframe class="iframe" src="../polygon/" name="polygon">
+					</iframe>
+				</div>
 
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico03.png" alt="ico03">
-                            </a>
-                            <span>Mamonde</span>
-                        </div>
-
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico04.png" alt="ico04">
-                            </a>
-                            <span>web-haeju</span>
-                        </div>
-
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico05.png" alt="ico05">
-                            </a>
-                            <span>Template</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- left_side -->
-
-            <div id="right_side">
-                <div class="folder">
-                    <div class="ico_box">
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico06.png" alt="ico06">
-                            </a>
-                            <span>Coding</span>
-                        </div>
-
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico07.png" alt="ico07">
-                            </a>
-                            <span>Photoshop</span>
-                        </div>
-
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico08.png" alt="ico08">
-                            </a>
-                            <span>Illurstrator</span>
-                        </div>
-
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico09.png" alt="ico09">
-                            </a>
-                            <span>Octopus</span>
-                        </div>
-
-                        <div class="ico draggable">
-                            <a href="#">
-                                <img src="assets/img/ico10.png" alt="ico10">
-                            </a>
-                            <span>Rocket</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- right_side -->
+        <div class="design_box">
+          <div class="design_img"><img src="assets/img/polygon_design_01.jpg" alt="polygon_design_01"></div>
+          <div class="design_img"><img src="assets/img/polygon_design_02.jpg" alt="polygon_design_02"></div>
+          <div class="design_img"><img src="assets/img/polygon_design_03.jpg" alt="polygon_design_03"></div>
         </div>
-        <!-- content -->
+			</div>
+		</div>
+		<!-- polygon browser -->
 
-        <!-- <div id="about" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em><a href="../scroll/index.html/about.html" target="_blank" title="새창에서 자기소개 사이트 보기">About me</a></em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goPage">
-                        <a href="#">
-                            <img src="assets/img/about_tumb_01.jpg" alt="thumbnail_01">
-                            <em>About me : about.html</em>
-                        </a>
-                    </div>
-                    <div class="object">
-                        <a href="../portfolio_pdf.pdf" target="_blank">
-                            <img src="assets/img/about_tumb_02.jpg" alt="thumbnail_01">
-                            <em>Lee Hae Ju : pdf</em>
-                        </a>
-                    </div>
-                </div>
-                <div class="iframe_box">
-                    <iframe class="iframe" src="../scroll/index.html/about.html" name="about"></iframe>
-                </div>
-            </div>
-        </div> -->
-        <!-- about browser -->
+		<div id="template" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box"><a href="../parallax/" target="_blank" title="새창에서 패럴럭스 사이트 보기">Parallax</a></em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="object_list">
+					<div class="object">
+						<button type="button" class="btn_object btn_go_page">
+							<img src="assets/img/template_tumb_01.jpg" alt="thumbnail_01">
+							<em>Parallax : Website</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object js_prepare">
+							<img src="assets/img/template_tumb_02.jpg" alt="thumbnail_01">
+							<em>Parallax : description</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design">
+							<img src="assets/img/template_tumb_03.jpg" alt="thumbnail_01">
+							<em>Main Design</em>
+						</button>
+					</div>
+				</div>
 
-        <div id="memories" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em><a href="../scroll/index.html" target="_blank" title="새창에서 메모리즈 사이트 보기">../scroll/index.html</a></em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="iframe_box">
-                    <iframe class="iframe" src="../scroll/index.html" name="memories"></iframe>
-                </div>
-            </div>
+				<div class="iframe_box">
+					<iframe class="iframe" src="../parallax/" name="template">
+					</iframe>
+				</div>
+
+        <div class="design_box">
+					<img src="assets/img/template_design_01.jpg" alt="template_design_01">
         </div>
-        <!-- memories browser -->
-        <!-- <div class="browser"></div> -->
+			</div>
+		</div>
+		<!-- template browser -->
 
-        <div id="mamonde" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em><a href="../mamonde/index.html" target="_blank" title="새창에서 마몽드 리디자인 사이트 보기">Mamonde</a></em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object">
-                        <a href="../mamonde/index.html" target="_blank">
-                            <img src="assets/img/mamonde_tumb_01.jpg" alt="thumbnail_01">
-                            <em>Mamonde : Website</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/mamonde_tumb_03.jpg" alt="thumbnail_01">
-                            <em>Main Design</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/mamonde_tumb_04.jpg" alt="thumbnail_01">
-                            <em>Sub Design 01</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/mamonde_tumb_05.jpg" alt="thumbnail_01">
-                            <em>Sub Design 02</em>
-                        </a>
-                    </div>
-                </div>
+		<div id="coding" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box">Coding</em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="object_list">
+					<div class="object">
+						<a href="../hynix/" class="btn_object" target="_blank">
+							<img src="assets/img/coding_tumb_01.jpg" alt="thumbnail_01">
+							<em>Sk Hynix</em>
+						</a>
+					</div>
+					<div class="object">
+						<a href="../gw/" class="btn_object" target="_blank">
+							<img src="assets/img/coding_tumb_02.jpg" alt="thumbnail_02">
+							<em>Gyeongju World</em>
+						</a>
+					</div>
+					<div class="object">
+						<a href="../webstandard/" class="btn_object" target="_blank">
+							<img src="assets/img/coding_tumb_03.jpg" alt="thumbnail_03">
+							<em>Web Standard</em>
+						</a>
+					</div>
+					<div class="object">
+						<a href="../html5/responsive/" class="btn_object" target="_blank">
+							<img src="assets/img/coding_tumb_04.jpg" alt="thumbnail_04">
+							<em>Responsive Web</em>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- coding browser -->
 
-                <div class="iframe_box">
-                    <iframe class="iframe" src="../scroll/mamonde.html" name="mamonde">
-                    </iframe>
-                </div>
-            </div>
+		<div id="ps" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box">Photoshop</em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="object_list">
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="0">
+							<img src="assets/img/web_thumb01.jpg" alt="">
+							<em>Mamonde Redesign</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="1">
+							<img src="assets/img/web_thumb04.jpg" alt="web_thumb03">
+							<em>Beauren Renewal</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="2">
+							<img src="assets/img/web_thumb06.jpg" alt="web_thumb06">
+							<em>Mommake Shopping mall</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="3">
+							<img src="assets/img/web_thumb07.jpg" alt="web_thumb07">
+							<em>Piezo Web Site</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="4">
+							<img src="assets/img/web_thumb08.jpg" alt="web_thumb08">
+							<em>Mediogen Web Site</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="5">
+							<img src="assets/img/web_thumb09.jpg" alt="web_thumb09">
+							<em>BNF Global Site</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="6">
+							<img src="assets/img/detail_thumb01.jpg" alt="detail_thumb01">
+							<em>빗살무늬토기조명 Detail</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="7">
+							<img src="assets/img/detail_thumb02.jpg" alt="detail_thumb02">
+							<em>승인식품 들기름 Detail</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="8">
+							<img src="assets/img/poster_thumb01.jpg" alt="poster_thumb01">
+							<em>Poster Design 01</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="9">
+							<img src="assets/img/poster_thumb02.jpg" alt="poster_thumb02">
+							<em>Poster Design 02</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="10">
+							<img src="assets/img/poster_thumb03.jpg" alt="poster_thumb03">
+							<em>Poster Design 03</em>
+						</button>
+					</div>
+				</div>
 
-            <div class="browser_body design_box">
-                <img src="assets/img/mamonde_design_01.jpg" alt="mamonde_design_01">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/mamonde_design_02.jpg" alt="mamonde_design_02">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/mamonde_design_03.jpg" alt="mamonde_design_03">
-            </div>
+        <div class="design_box">
+          <div class="design_img">
+            <img src="assets/img/mamonde_mockup.jpg" alt="mamonde_mockup">
+            <img src="assets/img/mamonde_design_01.jpg" alt="mamonde_design_01">
+            <img src="assets/img/mamonde_design_02.jpg" alt="mamonde_design_02">
+            <img src="assets/img/mamonde_design_03.jpg" alt="mamonde_design_03">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/beauren_mockup.jpg" alt="beauren_mockup">
+            <img src="assets/img/beauren_design_01.jpg" alt="beauren_design_01">
+            <img src="assets/img/beauren_design_02.jpg" alt="beauren_design_02">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/mommake_mockup.jpg" alt="mommake_mockup">
+            <img src="assets/img/mommake_design_01.jpg" alt="mommake_design_01">
+            <img src="assets/img/mommake_design_02.jpg" alt="mommake_design_02">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/piezo_mockup.jpg" alt="piezo_mockup">
+            <img src="assets/img/piezo_design_01.jpg" alt="piezo_design_01">
+            <img src="assets/img/piezo_design_02.jpg" alt="piezo_design_02">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/mediogen_mockup.jpg" alt="mediogen_mockup">
+            <img src="assets/img/mediogen_design_01.jpg" alt="mediogen_design_01">
+            <img src="assets/img/mediogen_design_02.jpg" alt="mediogen_design_02">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/bnf_mockup.jpg" alt="bnf_mockup">
+            <img src="assets/img/bnf_design_01.jpg" alt="bnf_design_01">
+          </div>
+          <div class="design_img">
+		        <img src="assets/img/detail_design_01.jpg" alt="detail_design_01">
+          </div>
+          <div class="design_img">
+		        <img src="assets/img/detail_design_02.jpg" alt="detail_design_02">
+          </div>
+          <div class="design_img">
+		        <img src="assets/img/poster_design_01.jpg" alt="poster_design_01">
+          </div>
+          <div class="design_img">
+		        <img src="assets/img/poster_design_02.jpg" alt="poster_design_02">
+          </div>
+          <div class="design_img">
+		        <img src="assets/img/poster_design_03.jpg" alt="poster_design_03">
+          </div>
+				</div>
+			</div>
+		</div>
+		<!-- ps browser -->
+
+		<div id="ai" class="browser js-browser">
+			<div class="browser_top">
+				<div class="btn_box">
+					<span class="close"></span>
+					<span class="yellow"></span>
+					<span class="green"></span>
+				</div>
+				<div class="folder_tit">
+					<!-- <div class="arr_box">
+						<img src="assets/img/left_arrow.png" alt="이전">
+						<img src="assets/img/right_arrow.png" alt="다음">
+						<img src="assets/img/refresh.png" alt="새로고침">
+					</div> -->
+					<em class="url_box">Photoshop</em>
+				</div>
+			</div>
+			<div class="browser_body">
+				<div class="object_list">
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="0">
+							<img src="assets/img/ai_tumb_01.jpg" alt="thumbnail_01">
+							<em>Flower</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="1">
+							<img src="assets/img/ai_tumb_02.jpg" alt="thumbnail_02">
+							<em>BOBA</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="2">
+							<img src="assets/img/ai_tumb_03.jpg" alt="thumbnail_03">
+							<em>Island</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="3">
+							<img src="assets/img/ai_tumb_04.jpg" alt="thumbnail_04">
+							<em>Raccoon</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="4">
+							<img src="assets/img/ai_tumb_05.jpg" alt="thumbnail_05">
+							<em>Bello! Minions</em>
+						</button>
+					</div>
+					<div class="object">
+						<button type="button" class="btn_object btn_design" data-index="5">
+							<img src="assets/img/ai_tumb_06.jpg" alt="thumbnail_06">
+							<em>Cat HARU</em>
+						</button>
+					</div>
+				</div>
+
+        <div class="design_box">
+          <div class="design_img">
+            <img src="assets/img/flower_img01.jpg" alt="flower_img01">
+            <img src="assets/img/flower_img02.jpg" alt="flower_img02">
+            <img src="assets/img/flower_img03.jpg" alt="flower_img03">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/boba_img01.jpg" alt="boba_img01">
+            <img src="assets/img/boba_img02.jpg" alt="boba_img02">
+            <img src="assets/img/boba_img03.jpg" alt="boba_img03">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/island_img01.jpg" alt="island_img01">
+            <img src="assets/img/island_img02.jpg" alt="island_img02">
+            <img src="assets/img/island_img03.jpg" alt="island_img03">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/raccoon_img01.jpg" alt="raccoon_img01">
+            <img src="assets/img/raccoon_img02.jpg" alt="raccoon_img02">
+            <img src="assets/img/raccoon_img03.jpg" alt="raccoon_img03">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/minion_img01.jpg" alt="minion_img01">
+            <img src="assets/img/minion_img02.jpg" alt="minion_img02">
+            <img src="assets/img/minion_img03.jpg" alt="minion_img03">
+          </div>
+          <div class="design_img">
+            <img src="assets/img/haru_img01.jpg" alt="haru_img01">
+            <img src="assets/img/haru_img02.jpg" alt="haru_img02">
+          </div>
         </div>
-        <!-- mamonde browser -->
+			</div>
+		</div>
+		<!-- ai browser -->
+    <!-- E: browser -->
 
-        <div id="polygon" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em><a href="../polygon/index.html" target="_blank" title="새창에서 웹디자이너 해주 포트폴리오 보기">Polygon</a></em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goPage">
-                        <a href="#">
-                            <img src="assets/img/polygon_tumb_01.jpg" alt="thumbnail_01">
-                            <em>web-haeju : Website</em>
-                        </a>
-                    </div>
-                    <div class="object soon">
-                        <a href="#">
-                            <img src="assets/img/polygon_tumb_02.jpg" alt="thumbnail_01">
-                            <em>web-haeju : description</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/polygon_tumb_03.jpg" alt="thumbnail_01">
-                            <em>Skecth</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/polygon_tumb_04.jpg" alt="thumbnail_01">
-                            <em>Prototype</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/polygon_tumb_05.jpg" alt="thumbnail_01">
-                            <em>Main Design</em>
-                        </a>
-                    </div>
-                </div>
+		<div id="prepare">
+			<p>준비중 입니다 :)</p>
+		</div>
+		<!-- 준비중 -->
+	</div>
 
-                <div class="iframe_box">
-                    <iframe class="iframe" src="../polygon/index.html" name="polygon">
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <img src="assets/img/polygon_design_01.jpg" alt="polygon_design_01">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/polygon_design_02.jpg" alt="polygon_design_02">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/polygon_design_03.jpg" alt="polygon_design_03">
-            </div>
-        </div>
-        <!-- polygon browser -->
-
-        <div id="template" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em><a href="../parallax/index.html" target="_blank" title="새창에서 패럴럭스 사이트 보기">Template</a></em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goPage">
-                        <a href="#">
-                            <img src="assets/img/template_tumb_01.jpg" alt="thumbnail_01">
-                            <em>Template : Website</em>
-                        </a>
-                    </div>
-                    <div class="object soon">
-                        <a href="#">
-                            <img src="assets/img/template_tumb_02.jpg" alt="thumbnail_01">
-                            <em>Template : description</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/template_tumb_03.jpg" alt="thumbnail_01">
-                            <em>Main Design</em>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="iframe_box">
-                    <iframe class="iframe" src="../parallax/index.html" name="template">
-                    </iframe>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <img src="assets/img/template_design_01.jpg" alt="template_design_01">
-            </div>
-        </div>
-        <!-- template browser -->
-
-        <div id="coding" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>Coding</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object">
-                        <a href="../hynix/index.html" target="_blank">
-                            <img src="assets/img/coding_tumb_01.jpg" alt="thumbnail_01">
-                            <em>Sk Hynix</em>
-                        </a>
-                    </div>
-                    <div class="object">
-                        <a href="../gw/index.html" target="_blank"> 
-                            <img src="assets/img/coding_tumb_02.jpg" alt="thumbnail_02">
-                            <em>Gyeongju World</em>
-                        </a>
-                    </div>
-                    <div class="object">
-                        <a href="../webstandard/index.html" target="_blank">
-                            <img src="assets/img/coding_tumb_03.jpg" alt="thumbnail_03">
-                            <em>Web Standard</em>
-                        </a>
-                    </div>
-                    <div class="object">
-                        <a href="../html5/responsive/index.html" target="_blank">
-                            <img src="assets/img/coding_tumb_04.jpg" alt="thumbnail_04">
-                            <em>Responsive Web</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- coding browser -->
-
-        <div id="ps" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>Photoshop</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goSec">
-                        <a href="#">
-                            <img src="assets/img/ps_tumb_01.jpg" alt="thumbnail_01">
-                            <em>Web Design</em>
-                        </a>
-                    </div>
-                    <div class="object goSec">
-                        <a href="#">
-                            <img src="assets/img/ps_tumb_02.jpg" alt="thumbnail_02">
-                            <em>Catalog Design</em>
-                        </a>
-                    </div>
-                    <div class="object goSec">
-                        <a href="#">
-                            <img src="assets/img/ps_tumb_03.jpg" alt="thumbnail_03">
-                            <em>Detail Design</em>
-                        </a>
-                    </div>
-                    <div class="object goSec">
-                        <a href="#">
-                            <img src="assets/img/ps_tumb_04.jpg" alt="thumbnail_04">
-                            <em>Poster Design</em>
-                        </a>
-                    </div>
-                    <div class="object goSec">
-                        <a href="#">
-                            <img src="assets/img/ps_tumb_05.jpg" alt="thumbnail_05">
-                            <em>etc</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="ps_web" class="browser_sec">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>Web & App Design</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb01.jpg" alt="web_thumb01">
-                            <em>Mamonde Redesign</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb02.jpg" alt="web_thumb02">
-                            <em>Everybot Shopping mall</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb04.jpg" alt="web_thumb03">
-                            <em>Beauren Renewal</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb03.jpg" alt="web_thumb04">
-                            <em>Ecotech Sub Page</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb05.jpg" alt="web_thumb05">
-                            <em>GlanceDMC Sub Page</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb06.jpg" alt="web_thumb06">
-                            <em>Mommake Shopping mall</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb07.jpg" alt="web_thumb07">
-                            <em>Piezo Web Site</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb08.jpg" alt="web_thumb08">
-                            <em>Mediogen Web Site</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/web_thumb09.jpg" alt="web_thumb09">
-                            <em>BNF Global Site</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider mamonde">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mamonde_mockup.jpg" alt="mamonde_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mamonde_design_01.jpg" alt="mamonde_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mamonde_design_02.jpg" alt="mamonde_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mamonde_design_03.jpg" alt="mamonde_design_03">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider everybot">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_mockup.jpg" alt="everybot_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_design_01.jpg" alt="everybot_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_design_02.jpg" alt="everybot_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_design_03.jpg" alt="everybot_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_design_04.jpg" alt="everybot_design_04">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_design_05.jpg" alt="everybot_design_05">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_design_06.jpg" alt="everybot_design_06">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/everybot_design_07.jpg" alt="everybot_design_07">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider beauren">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/beauren_mockup.jpg" alt="beauren_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/beauren_design_01.jpg" alt="beauren_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/beauren_design_02.jpg" alt="beauren_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/beauren_design_03.jpg" alt="beauren_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/beauren_design_04.jpg" alt="beauren_design_04">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider ecotech">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/ecotech_mockup.jpg" alt="ecotech_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/ecotech_design_01.jpg" alt="ecotech_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/ecotech_design_02.jpg" alt="ecotech_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/ecotech_design_03.jpg" alt="ecotech_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/ecotech_design_04.jpg" alt="ecotech_design_04">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider glance">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/glance_mockup.jpg" alt="glance_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/glance_design_01.jpg" alt="glance_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/glance_design_02.jpg" alt="glance_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/glance_design_03.jpg" alt="glance_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/glance_design_04.jpg" alt="glance_design_04">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/glance_design_05.jpg" alt="glance_design_05">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider mommake">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mommake_mockup.jpg" alt="mommake_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mommake_design_01.jpg" alt="mommake_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mommake_design_02.jpg" alt="mommake_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mommake_design_03.jpg" alt="mommake_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mommake_design_04.jpg" alt="mommake_design_04">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider piezo">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_mockup.jpg" alt="piezo_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_01.jpg" alt="piezo_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_02.jpg" alt="piezo_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_03.jpg" alt="piezo_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_04.jpg" alt="piezo_design_04">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_05.jpg" alt="piezo_design_05">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_06.jpg" alt="piezo_design_06">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_07.jpg" alt="piezo_design_07">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/piezo_design_08.jpg" alt="piezo_design_08">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider mediogen">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_mockup.jpg" alt="mediogen_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_01.jpg" alt="mediogen_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_02.jpg" alt="mediogen_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_03.jpg" alt="mediogen_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_04.jpg" alt="mediogen_design_04">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_05.jpg" alt="mediogen_design_05">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_06.jpg" alt="mediogen_design_06">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_07.jpg" alt="mediogen_design_07">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/mediogen_design_08.jpg" alt="mediogen_design_08">
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <div class="slider bnf">
-                    <div class="slide_btn">
-                        <span class="prev">prev</span>
-                        <span class="next">next</span>
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/bnf_mockup.jpg" alt="bnf_mockup">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/bnf_design_01.jpg" alt="bnf_design_01">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/bnf_design_02.jpg" alt="bnf_design_02">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/bnf_design_03.jpg" alt="bnf_design_03">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/bnf_design_04.jpg" alt="bnf_design_04">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/bnf_design_05.jpg" alt="bnf_design_05">
-                    </div>
-                    <div class="slide">
-                        <img src="assets/img/bnf_design_06.jpg" alt="bnf_design_06">
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div id="ps_catalog" class="browser_sec">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>Catalog Design</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/catalog_thumb01.jpg" alt="thumbnail_01">
-                            <em>BNF Global Catalog</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/catalog_thumb02.jpg" alt="thumbnail_02">
-                            <em>Mommake Catalog</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/catalog_thumb03.jpg" alt="thumbnail_03">
-                            <em>Ecotech Catalog</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box iframe">
-                <iframe src="https://e.issuu.com/anonymous-embed.html?u=562557&d=180314_bnf________low" style="border:none;" allowfullscreen></iframe>
-            </div>
-            <div class="browser_body design_box iframe">
-                <iframe src="https://e.issuu.com/anonymous-embed.html?u=562557&d=____" style="border:none;" allowfullscreen></iframe>
-            </div>
-            <div class="browser_body design_box iframe">
-                <iframe src="https://e.issuu.com/anonymous-embed.html?u=562557&d=_________kr_2_low" style="border:none;" allowfullscreen></iframe>
-            </div>
-        </div>
-
-        <div id="ps_detail" class="browser_sec">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>Products Detail Design</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/detail_thumb01.jpg" alt="detail_thumb01">
-                            <em>빗살무늬토기조명 Detail</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/detail_thumb02.jpg" alt="detail_thumb02">
-                            <em>승인식품 들기름 Detail</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/detail_thumb03.jpg" alt="detail_thumb03">
-                            <em>The Body Shop Event Detail</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box pd_20p">
-                <img src="assets/img/detail_design_01.jpg" alt="detail_design_01">
-            </div>
-            <div class="browser_body design_box pd_20p">
-                <img src="assets/img/detail_design_02.jpg" alt="detail_design_02">
-            </div>
-            <div class="browser_body design_box pd_20p">
-                <img src="assets/img/detail_design_03.jpg" alt="detail_design_03">
-            </div>
-        </div>
-
-        <div id="ps_poster" class="browser_sec">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>Poster Design</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/poster_thumb01.jpg" alt="poster_thumb01">
-                            <em>Poster Design 01</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/poster_thumb02.jpg" alt="poster_thumb02">
-                            <em>Poster Design 02</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/poster_thumb03.jpg" alt="poster_thumb03">
-                            <em>Poster Design 03</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box pd_20p">
-                <img src="assets/img/poster_design_01.jpg" alt="poster_design_01.jpg">
-            </div>
-            <div class="browser_body design_box pd_20p">
-                <img src="assets/img/poster_design_02.jpg" alt="poster_design_02">
-            </div>
-            <div class="browser_body design_box pd_20p">
-                <img src="assets/img/poster_design_03.jpg" alt="poster_design_03">
-            </div>
-        </div>
-
-        <div id="ps_etc" class="browser_sec">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>etc</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/etc_thumb01.jpg" alt="poster_thumb01">
-                            <em>Glass Green Ball</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/etc_thumb02.jpg" alt="poster_thumb02">
-                            <em>Poster Stamp</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <img src="assets/img/glass_img01.jpg" alt="glass_img01">
-                <img src="assets/img/glass_img02.jpg" alt="glass_img02">
-                <img src="assets/img/glass_img03.jpg" alt="glass_img03">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/stamp_img01.jpg" alt="stamp_img01">
-                <img src="assets/img/stamp_img02.jpg" alt="stamp_img02">
-                <img src="assets/img/stamp_img03.jpg" alt="stamp_img03">
-                <img src="assets/img/stamp_img04.jpg" alt="stamp_img04">
-                <img src="assets/img/stamp_img05.jpg" alt="stamp_img05">
-            </div>
-        </div>
-        <!-- ps browser -->
-
-        <div id="ai" class="browser">
-            <div class="browser_top">
-                <div class="btn_box">
-                    <span class="close"></span>
-                    <span class="yellow"></span>
-                    <span class="green"></span>
-                </div>
-                <div class="folder_tit">
-                    <div class="arr_box">
-                        <img src="assets/img/left_arrow.png" alt="left_arrow">
-                        <img src="assets/img/right_arrow.png" alt="right_arrow">
-                        <img src="assets/img/refresh.png" alt="refresh.png">
-                    </div>
-                    <em>Photoshop</em>
-                </div>
-            </div>
-            <div class="browser_body">
-                <div class="object_box">
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/ai_tumb_01.jpg" alt="thumbnail_01">
-                            <em>Flower</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/ai_tumb_02.jpg" alt="thumbnail_02">
-                            <em>BOBA</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/ai_tumb_03.jpg" alt="thumbnail_03">
-                            <em>Island</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/ai_tumb_04.jpg" alt="thumbnail_04">
-                            <em>Raccoon</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/ai_tumb_05.jpg" alt="thumbnail_05">
-                            <em>Bello! Minions</em>
-                        </a>
-                    </div>
-                    <div class="object goDesign">
-                        <a href="#">
-                            <img src="assets/img/ai_tumb_06.jpg" alt="thumbnail_06">
-                            <em>Cat HARU</em>
-                        </a>
-                    </div>
-                </div>
-            </div>
-
-            <div class="browser_body design_box">
-                <img src="assets/img/flower_img01.jpg" alt="flower_img01">
-                <img src="assets/img/flower_img02.jpg" alt="flower_img02">
-                <img src="assets/img/flower_img03.jpg" alt="flower_img03">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/boba_img01.jpg" alt="boba_img01">
-                <img src="assets/img/boba_img02.jpg" alt="boba_img02">
-                <img src="assets/img/boba_img03.jpg" alt="boba_img03">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/island_img01.jpg" alt="island_img01">
-                <img src="assets/img/island_img02.jpg" alt="island_img02">
-                <img src="assets/img/island_img03.jpg" alt="island_img03">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/raccoon_img01.jpg" alt="raccoon_img01">
-                <img src="assets/img/raccoon_img02.jpg" alt="raccoon_img02">
-                <img src="assets/img/raccoon_img03.jpg" alt="raccoon_img03">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/minion_img01.jpg" alt="minion_img01">
-                <img src="assets/img/minion_img02.jpg" alt="minion_img02">
-                <img src="assets/img/minion_img03.jpg" alt="minion_img03">
-            </div>
-            <div class="browser_body design_box">
-                <img src="assets/img/haru_img01.jpg" alt="haru_img01">
-                <img src="assets/img/haru_img02.jpg" alt="haru_img02">
-            </div>
-        </div>
-        <!-- ai browser -->
-
-        <div id="prepare">
-            <p>준비중 입니다 :)</p>
-        </div>
-        <!-- 준비중 -->
-    </div>
-
-    <script src="assets/js/jquery-3.3.1.min.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
-    <script src="https://i.koya.io/kpt.js"></script>
-    <script src="assets/js/custom.js"></script>
-    <script>
-        $( ".draggable" ).draggable({
-            connectToSortable: "#sortable",
-            revert: "invalid"
-        });
-    </script>
+	<script src="assets/js/jquery-3.3.1.min.js"></script>
+	<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js" integrity="sha256-VazP97ZCwtekAsvgPBSUwPFKdrwD3unUfSGVYrahUqU=" crossorigin="anonymous"></script>
+	<script src="assets/js/custom.js"></script>
+	<script>
+		$( ".draggable" ).draggable({
+			connectToSortable: "#sortable",
+			revert: "invalid"
+		});
+	</script>
 </body>
 </html>

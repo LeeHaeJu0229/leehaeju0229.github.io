@@ -121,9 +121,9 @@ $(document).ready(function(){
     var scroll_tf = true;
     var box_length = $('.move01 .box').length;
     var project_h = $('.project_num').height();
-    console.log(box_length)
+    // console.log(box_length)
     if(scroll_tf = true){
-        console.log(scroll_tf)
+        // console.log(scroll_tf)
         // 첫 번째 move
         for(i = 0; i < (box_length - 1); i++){
             $('.move:eq(0) .box').eq(i).delay(120 * i).animate({
@@ -341,7 +341,7 @@ $(document).ready(function(){
     $('.list_box').css({
         width: list_box_w + 20
     });
-    console.log((list_w + 20))
+    // console.log((list_w + 20))
     
     var list_length = $('.list_box .list').length;
     var list_scroll_tf = false;

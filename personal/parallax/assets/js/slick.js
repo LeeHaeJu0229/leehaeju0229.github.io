@@ -1,11 +1,3 @@
-$(document).ready(function(){
-    var slick_track_w = $('.slick-track').width();
-        slick_track_w = slick_track_w - 20;
-        console.log(slick_track_w)
-        $('.slick-track').width(slick_track_w);
-})
-
-
 /*
      _ _      _       _
  ___| (_) ___| | __  (_)___
